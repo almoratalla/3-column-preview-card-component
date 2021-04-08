@@ -1,0 +1,266 @@
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$trans-white: hsla(0, 0%, 100%, 0.75);
+$vl-gray: hsl(0, 0%, 95%);
+
+// For mobile target min: 375 x 1502
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: $vl-gray;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.preview-card-component {
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 5.5rem 2rem;
+}
+
+.card:nth-child(1){
+    order: 1;
+    background-color: $bright-orange;
+
+    button {
+        color: $bright-orange;
+    }
+}
+
+.card:nth-child(2){
+    order: 2;
+    background-color: $dark-cyan;
+
+    button {
+        color: $dark-cyan;
+    }
+}
+
+.card:nth-child(3){
+    order: 3;
+    background-color: $very-dark-cyan;
+
+    button {
+        color: $very-dark-cyan;
+    } 
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 2.75rem;
+    padding-right: 1.5rem;
+
+    img {
+        width: 4em;
+        height: 2.5em;
+    }
+
+    h1 {
+        margin: 0.7em 0 0;
+        color: white;
+        font-family: 'Big Shoulders Display', cursive;
+        font-weight: 700;
+        font-size: 2.5em;
+    }
+
+    p {
+        margin: 1.2em 1em 5em 0;
+        color: $trans-white;
+        font-weight: 300;
+        line-height: 1.7em;
+        font-size: 15px;
+    }
+
+    button {
+        border: none;
+        background: white;
+        border-radius: 40px;
+        width: 9em;
+        padding: 0.8em 1.2em;
+        font-size: 1em;
+        font-weight: 400;
+        border: 2px solid white;
+        outline: none;
+    }
+
+    button:hover {
+        background-color: transparent;
+        color: white;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    button:active {
+        background-color: transparent;
+        color: white;
+        margin: 0;
+        cursor: pointer;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; align-self: center; position: absolute; bottom: 1em; visibility: hidden;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+// @For screens ~ 1366 x 768, 1280 x 720 or 1440 x 800
+// body above 1232px X 624px but not more than 1600px
+@media (min-width: 60em){
+    body { max-height: 100vh; }
+
+    .preview-card-component {
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 57.56rem;
+        margin: 10.75rem auto;
+        min-height: 31.375rem;
+        overflow: hidden;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 3em;
+        padding-right: 2em;
+
+        img {
+            width: 4em;
+            height: 2.5em;
+        }
+
+        h1 {
+            margin: 0.7em 0 0;
+            color: white;
+            font-family: 'Big Shoulders Display', cursive;
+            font-weight: 700;
+            font-size: 2.5em;
+        }
+
+        p {
+            margin: 1.2em 1em 5em 0;
+            color: $trans-white;
+            font-weight: 300;
+            line-height: 1.7em;
+            font-size: 15px;
+        }
+
+        button {
+            border: none;
+            background: white;
+            border-radius: 40px;
+            width: 9em;
+            padding: 0.8em 1.2em;
+            font-size: 1em;
+            font-weight: 400;
+            border: 2px solid white;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: white;
+            margin: 0;
+        }
+
+        button:active {
+            background-color: transparent;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .card:nth-child(1){
+        padding-right: 2.5em;
+    }
+
+    .card:nth-child(1){
+        padding-right: 3em;
+    }
+
+    .attribution { visibility: inherit; }
+}
+
+// @For screens 1920 x 1080 
+// body 1920px X 1076px/937px or 120rem x 67.25rem/58.6rem;
+@media (min-width: 100em){
+    body { max-height: 100vh; }
+
+    .preview-card-component {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 14.125rem auto;
+        max-width: 77rem;
+        height: 42rem;
+        min-height: 39rem;
+        overflow: hidden;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        padding: 4em;
+
+        img {
+            width: 6em;
+            height: 4em;
+        }
+
+        h1 {
+            margin: 0.5em 0 0;
+            color: $trans-white;
+            font-family: 'Big Shoulders Display', cursive;
+            font-weight: 700;
+            font-size: 3.5em;
+        }
+
+        p {
+            margin: 0 1em 5em 0;
+            color: $trans-white;
+            font-weight: 400;
+            line-height: 2em;
+            font-size: 15px;
+        }
+
+        button {
+            border: none;
+            background: white;
+            border-radius: 40px;
+            width: 12em;
+            padding: 1.2em;
+            font-size: 1em;
+            border: 2px solid white;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: white;
+            margin: 0;
+        }
+
+        button:active {
+            background-color: transparent;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    .attribution { display: block }
+}
+

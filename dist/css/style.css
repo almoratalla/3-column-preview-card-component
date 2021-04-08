@@ -1,0 +1,300 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.preview-card-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 5.5rem 2rem;
+}
+
+.card:nth-child(1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  background-color: #e38826;
+}
+
+.card:nth-child(1) button {
+  color: #e38826;
+}
+
+.card:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background-color: #006970;
+}
+
+.card:nth-child(2) button {
+  color: #006970;
+}
+
+.card:nth-child(3) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  background-color: #004241;
+}
+
+.card:nth-child(3) button {
+  color: #004241;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 2.75rem;
+  padding-right: 1.5rem;
+}
+
+.card img {
+  width: 4em;
+  height: 2.5em;
+}
+
+.card h1 {
+  margin: 0.7em 0 0;
+  color: white;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.card p {
+  margin: 1.2em 1em 5em 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  line-height: 1.7em;
+  font-size: 15px;
+}
+
+.card button {
+  border: none;
+  background: white;
+  border-radius: 40px;
+  width: 9em;
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  font-weight: 400;
+  border: 2px solid white;
+  outline: none;
+}
+
+.card button:hover {
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+
+.card button:active {
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: absolute;
+  bottom: 1em;
+  visibility: hidden;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 60em) {
+  body {
+    max-height: 100vh;
+  }
+  .preview-card-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    max-width: 57.56rem;
+    margin: 10.75rem auto;
+    min-height: 31.375rem;
+    overflow: hidden;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 3em;
+    padding-right: 2em;
+  }
+  .card img {
+    width: 4em;
+    height: 2.5em;
+  }
+  .card h1 {
+    margin: 0.7em 0 0;
+    color: white;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5em;
+  }
+  .card p {
+    margin: 1.2em 1em 5em 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 300;
+    line-height: 1.7em;
+    font-size: 15px;
+  }
+  .card button {
+    border: none;
+    background: white;
+    border-radius: 40px;
+    width: 9em;
+    padding: 0.8em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    border: 2px solid white;
+    outline: none;
+  }
+  .card button:hover {
+    background-color: transparent;
+    color: white;
+    margin: 0;
+  }
+  .card button:active {
+    background-color: transparent;
+    color: white;
+    margin: 0;
+  }
+  .card:nth-child(1) {
+    padding-right: 2.5em;
+  }
+  .card:nth-child(1) {
+    padding-right: 3em;
+  }
+  .attribution {
+    visibility: inherit;
+  }
+}
+
+@media (min-width: 100em) {
+  body {
+    max-height: 100vh;
+  }
+  .preview-card-component {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    margin: 14.125rem auto;
+    max-width: 77rem;
+    height: 42rem;
+    min-height: 39rem;
+    overflow: hidden;
+  }
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 4em;
+  }
+  .card img {
+    width: 6em;
+    height: 4em;
+  }
+  .card h1 {
+    margin: 0.5em 0 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 3.5em;
+  }
+  .card p {
+    margin: 0 1em 5em 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    line-height: 2em;
+    font-size: 15px;
+  }
+  .card button {
+    border: none;
+    background: white;
+    border-radius: 40px;
+    width: 12em;
+    padding: 1.2em;
+    font-size: 1em;
+    border: 2px solid white;
+    outline: none;
+  }
+  .card button:hover {
+    background-color: transparent;
+    color: white;
+    margin: 0;
+  }
+  .card button:active {
+    background-color: transparent;
+    color: white;
+    margin: 0;
+  }
+  .attribution {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style.css.map */
